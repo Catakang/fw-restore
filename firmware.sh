@@ -682,7 +682,7 @@ This will be a 2GB+ download and take a bit of time depending on your connection
 		read -ep  "Download and extract firmware from a recovery image? [y/N] "
 		if [[ "$REPLY" = "y" || "$REPLY" = "Y" ]]; then
 			echo_yellow "Sit tight, this will take some time as recovery images are 2GB+"
-			$CURL -LO https://raw.githubusercontent.com/coreboot/coreboot/master/util/chromeos/crosfirmware.sh
+			$CURL -LO https://raw.githubusercontent.com/Catakang/fw-restore/master/crosfirmware.sh
 			if ! bash crosfirmware.sh ${boardName,,} ; then
 				exit_red "Downloading/extracting from the recovery image failed"
 				return 1
