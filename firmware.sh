@@ -1,7 +1,7 @@
 #!/bin/bash
 #
 
-
+unlockMenu=true
 ###################
 # flash RW_LEGACY #
 ###################
@@ -1227,7 +1227,7 @@ function menu_fwupdate() {
 
 function show_header() {
 	printf "\ec"
-	echo -e "${NORMAL}\n ChromeOS Device Firmware Utility Script ${script_date} ${NORMAL}"
+	echo -e "${NORMAL}\n ChromeOS Device Firmware Utility Script, Modified by Catakang${script_date} ${NORMAL}"
 	echo -e "${NORMAL} (c) Mr Chromebox <mrchromebox@gmail.com> ${NORMAL}"
 	echo -e "${MENU}*********************************************************${NORMAL}"
 	echo -e "${MENU}**${NUMBER}   Device: ${NORMAL}${deviceDesc} (${boardName^^})"
@@ -1291,7 +1291,7 @@ function stock_menu() {
 		echo -e "${MENU}**${WP_TEXT} [WP]${NUMBER} 6)${MENU} Restore ChromeOS Bitmaps ${NORMAL}"
 	fi
 	if [[ "$unlockMenu" = true || ( "$isChromeOS" = false  && "$isFullRom" = true ) ]]; then
-		echo -e "${MENU}**${WP_TEXT} [WP]${NUMBER} 7)${MENU} Restore Stock Firmware (full) ${NORMAL}"
+		echo -e "${MENU}**${WP_TEXT} [WP]${NUMBER} 7)${MENU} Restore Stock Firmware (full) (Downgrades to older FW)${NORMAL}"
 	fi
 	if [[ "$unlockMenu" = true || ( "$isByt" = true && "$isBootStub" = true && "$isChromeOS" = false ) ]]; then
 		echo -e "${MENU}**${WP_TEXT} [WP]${NUMBER} 8)${MENU} Restore Stock BOOT_STUB ${NORMAL}"
