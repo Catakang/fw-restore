@@ -704,7 +704,6 @@ This will be a 2GB+ download and take a bit of time depending on your connection
 		fi
 	fi
 	firmware_file=/tmp/stock-firmware.rom
-fi
 
 #flash stock firmware
 echo_yellow "Restoring stock firmware"
